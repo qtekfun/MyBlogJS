@@ -55,12 +55,11 @@
         <section>
           <h2 class="text-2xl font-bold text-gray-900 mb-8">Posts Recientes</h2>
 
-          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="space-y-6">
             <PostCard
               v-for="post in posts"
               :key="post.id"
               :post="post"
-              @click="handlePostClick"
             />
           </div>
         </section>
@@ -79,7 +78,7 @@ const posts = ref([
     id: 1,
     title: 'Mi primer post en el blog',
     excerpt: 'Este es mi primer post donde hablo sobre el inicio de este proyecto...',
-    content: 'Contenido completo del primer post aquí. Este es un texto más largo para calcular el tiempo de lectura. Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    content: 'Contenido completo del primer post aquí',
     date: '2025-08-17',
     tags: ['vue', 'javascript', 'blog'],
   },
@@ -87,7 +86,7 @@ const posts = ref([
     id: 2,
     title: 'Aprendiendo Vue.js y Tailwind',
     excerpt: 'Mis experiencias construyendo este blog con tecnologías modernas...',
-    content: 'Contenido del segundo post con información detallada sobre Vue.js y Tailwind CSS. Aquí explico mi proceso de aprendizaje y los desafíos que encontré.',
+    content: 'Contenido del segundo post',
     date: '2025-08-16',
     tags: ['vue', 'tailwind', 'desarrollo'],
   },
@@ -95,15 +94,9 @@ const posts = ref([
     id: 3,
     title: 'Próximas funcionalidades',
     excerpt: 'Qué planeo agregar a este blog en las próximas semanas...',
-    content: 'Ideas y roadmap del blog. Planeo agregar un sistema de comentarios, búsqueda, categorías y muchas más funcionalidades emocionantes.',
+    content: 'Ideas y roadmap del blog',
     date: '2025-08-15',
     tags: ['planes', 'roadmap'],
   },
 ])
-
-// Handle post click
-const handlePostClick = (post) => {
-  console.log('Clicked on post:', post.title)
-  // Aquí después agregaremos navegación a la página del post
-}
 </script>
