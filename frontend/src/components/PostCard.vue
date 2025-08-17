@@ -9,16 +9,16 @@
 </template>
 
 <script setup>
-  <!-- Aquí irá tu lógica de Vue -->
-  import { computed } from 'vue'
-  const props = defineProps({
-    post: {
-      type: Object,
-      required: true
-    }
-  })
+// Aquí irá tu lógica de Vue
+import { computed } from 'vue'
+const props = defineProps({
+  post: {
+    type: Object,
+    required: true
+  }
+})
 </script>
 
 <style scoped>
-  <!-- Aquí irán tus estilos personalizados (si necesitas) -->
+/* Aquí irán tus estilos personalizados (si necesitas) */
 </style>
