@@ -43,12 +43,15 @@
           {{ formatDate(post.date) }}
         </div>
         
-        <button class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium text-sm transition-colors">
+        <router-link 
+          :to="`/post/${post.slug}`"
+          class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium text-sm transition-colors"
+        >
           Leer más
           <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
           </svg>
-        </button>
+        </router-link>
       </div>
     </div>
   </article>
