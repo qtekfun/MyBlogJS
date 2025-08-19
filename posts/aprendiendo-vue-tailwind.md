@@ -17,6 +17,7 @@ Construir este blog ha sido una experiencia increíble de aprendizaje. En este p
 Vengo de trabajar con otros frameworks, pero Vue.js tiene algo especial:
 
 #### Composition API
+
 La nueva Composition API hace que el código sea mucho más legible y mantenible:
 
 ```javascript
@@ -29,6 +30,7 @@ const filteredPosts = computed(() =>
 ```
 
 #### Reactividad intuitiva
+
 La reactividad en Vue.js es simplemente mágica. Cambias una variable y todo se actualiza automáticamente.
 
 ### Tailwind CSS: Utility-first que funciona

@@ -13,6 +13,7 @@ Configurar un proyecto Vue.js moderno puede parecer abrumador con tantas opcione
 ## Herramientas esenciales
 
 ### Vite como bundler
+
 Vite se ha convertido en mi herramienta favorita por su velocidad:
 
 ```bash
@@ -22,6 +23,7 @@ npm install
 ```
 
 ### ESLint y Prettier
+
 Para mantener el código limpio y consistente:
 
 ```bash

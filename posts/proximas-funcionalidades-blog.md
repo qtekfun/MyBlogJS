@@ -13,7 +13,9 @@ Este blog está en constante evolución. Aquí tienes un vistazo a las funcional
 ## Funcionalidades en desarrollo
 
 ### Sistema de búsqueda
+
 Implementaré una búsqueda que permita encontrar posts por:
+
 - Título
 - Contenido
 - Tags
@@ -22,36 +24,44 @@ Implementaré una búsqueda que permita encontrar posts por:
 Usaré Fuse.js para búsqueda fuzzy y una experiencia más inteligente.
 
 ### Categorías y filtros
+
 Los posts se podrán filtrar por:
+
 - Categorías (Desarrollo, Diseño, Tutoriales)
 - Tags
 - Fecha de publicación
 - Tiempo de lectura estimado
 
 ### Modo oscuro
+
 Un toggle para cambiar entre tema claro y oscuro, con:
+
 - Persistencia en localStorage
 - Animaciones suaves
 - Respeto a la preferencia del sistema
 
 ### RSS Feed
+
 Para que puedas suscribirte y recibir actualizaciones automáticamente.
 
 ## Mejoras técnicas planeadas
 
 ### Performance
+
 - Lazy loading de imágenes
 - Optimización de bundle
 - Service Worker para cache
 - Imagen optimizada automática
 
 ### SEO
+
 - Meta tags dinámicos
 - Structured data
 - Sitemap automático
 - Open Graph tags
 
 ### Accesibilidad
+
 - Navegación por teclado
 - Screen reader support
 - Contraste mejorado
@@ -60,13 +70,16 @@ Para que puedas suscribirte y recibir actualizaciones automáticamente.
 ## Contenido futuro
 
 ### Series de posts
+
 Planeo crear series sobre:
+
 1. **Vue.js desde cero**: Tutorial completo
 2. **CSS moderno**: Técnicas avanzadas
 3. **JavaScript tips**: Trucos y mejores prácticas
 4. **Proyectos paso a paso**: Builds en vivo
 
 ### Interactividad
+
 - Comentarios (probablemente con Giscus)
 - Reacciones a posts
 - Newsletter semanal
@@ -75,18 +88,21 @@ Planeo crear series sobre:
 ## Timeline estimado
 
 ### Mes 1 (Agosto 2025)
+
 - ✅ Estructura básica del blog
 - ✅ Primeros posts
 - 🔄 Sistema de búsqueda
 - 🔄 Modo oscuro
 
 ### Mes 2 (Septiembre 2025)
+
 - 📅 Categorías y filtros
 - 📅 RSS Feed
 - 📅 Mejoras de performance
 - 📅 Primera serie de posts
 
 ### Mes 3 (Octubre 2025)
+
 - 📅 Sistema de comentarios
 - 📅 Newsletter
 - 📅 Métricas y analytics
@@ -95,6 +111,7 @@ Planeo crear series sobre:
 ## ¿Qué te gustaría ver?
 
 Me encantaría conocer tu opinión:
+
 - ¿Qué funcionalidad te parece más interesante?
 - ¿Hay algo que te gustaría que añada?
 - ¿Qué tipo de contenido te gustaría leer?
@@ -102,6 +119,7 @@ Me encantaría conocer tu opinión:
 ## Mantente al día
 
 Mientras implemento estas funcionalidades, puedes:
+
 - Seguir el desarrollo en GitHub
 - Suscribirte a las actualizaciones
 - Sugerir mejoras
