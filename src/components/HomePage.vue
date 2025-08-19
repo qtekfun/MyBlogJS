@@ -57,9 +57,10 @@
 
           <div class="space-y-6">
             <PostCard
-              v-for="post in posts"
-              :key="post.id"
+              v-for="post in sortedPosts"
+              :key="post.slug"
               :post="post"
+              :featured="index === 0"
             />
           </div>
         </section>
@@ -69,34 +70,15 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { onMounted } from 'vue'
 import PostCard from './PostCard.vue'
+import { usePosts } from '@/composables/usePosts'
 
-// Datos de posts estáticos
-const posts = ref([
-  {
-    id: 1,
-    title: 'Mi primer post en el blog',
-    excerpt: 'Este es mi primer post donde hablo sobre el inicio de este proyecto...',
-    content: 'Contenido completo del primer post aquí',
-    date: '2025-08-17',
-    tags: ['vue', 'javascript', 'blog'],
-  },
-  {
-    id: 2,
-    title: 'Aprendiendo Vue.js y Tailwind',
-    excerpt: 'Mis experiencias construyendo este blog con tecnologías modernas...',
-    content: 'Contenido del segundo post',
-    date: '2025-08-16',
-    tags: ['vue', 'tailwind', 'desarrollo'],
-  },
-  {
-    id: 3,
-    title: 'Próximas funcionalidades',
-    excerpt: 'Qué planeo agregar a este blog en las próximas semanas...',
-    content: 'Ideas y roadmap del blog',
-    date: '2025-08-15',
-    tags: ['planes', 'roadmap'],
-  },
-])
+// Usar el composable
+const { posts, loading, error, sortedPosts, loadPosts } = usePosts()
+
+// Cargar posts cuando se monte el componente
+onMounted(() => {
+  loadPosts()
+})
 </script>
