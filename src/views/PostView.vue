@@ -1,19 +1,19 @@
 <template>
   <div class="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
     <!-- Loading state -->
-    <div v-if="loading" class="max-w-4xl mx-auto px-4 py-16">
+    <div v-if="loading" class="max-w-full mx-auto px-4 py-16">
       <div class="text-center">
         <p class="text-gray-600">Cargando post...</p>
       </div>
     </div>
 
     <!-- Error state -->
-    <div v-else-if="error" class="max-w-4xl mx-auto px-4 py-16">
+    <div v-else-if="error" class="max-w-full mx-auto px-4 py-16">
       <div class="bg-red-50 border border-red-200 rounded-lg p-6">
         <h2 class="text-red-800 font-bold mb-2">Post no encontrado</h2>
         <p class="text-red-600">{{ error }}</p>
-        <router-link 
-          to="/" 
+        <router-link
+          to="/"
           class="inline-block mt-4 text-blue-600 hover:text-blue-800 font-medium"
         >
           ← Volver al inicio
@@ -22,22 +22,22 @@
     </div>
 
     <!-- Post content -->
-    <article v-else-if="post" class="max-w-4xl mx-auto px-4 py-8">
+    <article v-else-if="post" class="max-w-full mx-auto px-4 py-8">
       <!-- Back button -->
-      <router-link 
-        to="/" 
+      <router-link
+        to="/"
         class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium mb-8 transition-colors"
       >
         <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
         </svg>
-        Volver al blog
+        Volver atras
       </router-link>
 
       <!-- Post header -->
       <header class="bg-white rounded-xl shadow-lg p-8 mb-8">
         <h1 class="text-4xl font-bold text-gray-900 mb-4">{{ post.title }}</h1>
-        
+
         <!-- Meta info -->
         <div class="flex flex-wrap items-center gap-4 text-sm text-gray-600 mb-6">
           <div class="flex items-center">
@@ -62,8 +62,8 @@
 
         <!-- Tags -->
         <div v-if="post.tags && post.tags.length > 0" class="flex flex-wrap gap-2">
-          <span 
-            v-for="tag in post.tags" 
+          <span
+            v-for="tag in post.tags"
             :key="tag"
             class="bg-blue-50 text-blue-700 text-sm px-3 py-1 rounded-full font-medium"
           >
@@ -74,7 +74,7 @@
 
       <!-- Post content -->
       <div class="bg-white rounded-xl shadow-lg p-8">
-        <div 
+        <div
           class="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-700 prose-a:text-blue-600 prose-strong:text-gray-900"
           v-html="renderedContent"
         ></div>
@@ -85,7 +85,7 @@
         <div class="flex justify-between items-center">
           <div v-if="previousPost">
             <p class="text-sm text-gray-500 mb-1">Post anterior</p>
-            <router-link 
+            <router-link
               :to="`/post/${previousPost.slug}`"
               class="text-blue-600 hover:text-blue-800 font-medium"
             >
@@ -94,7 +94,7 @@
           </div>
           <div v-if="nextPost" class="text-right">
             <p class="text-sm text-gray-500 mb-1">Siguiente post</p>
-            <router-link 
+            <router-link
               :to="`/post/${nextPost.slug}`"
               class="text-blue-600 hover:text-blue-800 font-medium"
             >
@@ -168,11 +168,11 @@ const formatDate = (dateString) => {
 
 const loadPost = async () => {
   const slug = route.params.slug
-  
+
   if (posts.value.length === 0) {
     await loadPosts()
   }
-  
+
   const foundPost = getPostBySlug(slug)
   if (foundPost) {
     post.value = foundPost
@@ -204,21 +204,21 @@ onMounted(loadPost)
   line-height: 1.2;
 }
 
-.prose h1 { 
+.prose h1 {
   font-size: 2.5rem;
 }
 
-.prose h2 { 
+.prose h2 {
   font-size: 2rem;
   border-bottom: 2px solid #e5e7eb;
   padding-bottom: 0.5rem;
 }
 
-.prose h3 { 
+.prose h3 {
   font-size: 1.5rem;
 }
 
-.prose h4 { 
+.prose h4 {
   font-size: 1.25rem;
 }
 

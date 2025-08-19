@@ -1,17 +1,17 @@
 <template>
   <div
-    class="min-h-screen w-full bg-gradient-to-br from-blue-50 via-white to-purple-50 overflow-x-hidden"
+    class="min-h-screen w-full bg-gradient-to-br from-blue-50 to-white-50 overflow-x-hidden"
   >
     <!-- Hero Header -->
     <header class="relative overflow-hidden bg-white shadow-lg">
-      <div class="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-10"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-blue-600 to-white-600 opacity-10"></div>
       <div class="relative max-w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
         <div class="text-center">
           <h1
             class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 mb-3 sm:mb-4"
           >
             Qtekfun's
-            <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600"
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-white-600"
               >Site</span
             >
           </h1>
@@ -32,8 +32,8 @@
           >
           <div class="p-4 sm:p-6 lg:p-8 xl:p-12">
             <div class="flex items-center mb-3 sm:mb-4">
-              <div class="h-2 w-2 bg-green-500 rounded-full mr-2 sm:mr-3"></div>
-              <span class="text-xs sm:text-sm font-medium text-green-600">Featured Post</span>
+              <div class="h-2 w-2 bg-blue-500 rounded-full mr-2 sm:mr-3"></div>
+              <span class="text-xs sm:text-sm font-medium text-blue-600">Featured Post</span>
             </div>
             <h2 class="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-4 sm:mb-6">
               {{ sortedPosts[0].title }}
@@ -43,7 +43,7 @@
             </p>
             <router-link
               :to="`/post/${sortedPosts[0].slug}`"
-              class="inline-flex items-center px-4 sm:px-6 py-2 sm:py-3 border border-transparent text-sm sm:text-base font-medium rounded-lg text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 transition-all duration-200"
+              class="inline-flex items-center px-4 sm:px-6 py-2 sm:py-3 border border-transparent text-sm sm:text-base font-medium rounded-lg text-white bg-blue-50 from-blue-600 to-white-600 hover:from-blue-700 hover:to-white-700 transition-all duration-200"
             >
               Read More
               <svg
