@@ -14,6 +14,4 @@ export default defineConfig(({ command }) => ({
   define: {
     global: 'globalThis',
   },
-  // Configuración para GitHub Pages
-  base: command === 'build' ? '/MyBlogJS/' : '/',
 }))
